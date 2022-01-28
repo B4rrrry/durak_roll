@@ -1,0 +1,10 @@
+.games {
+  padding: 22px 0 0 0;
+  .online-chat {
+    margin-right: 13px;
+  }
+  // wrap 
+  &__wrap {
+    display: flex;
+  }
+}
