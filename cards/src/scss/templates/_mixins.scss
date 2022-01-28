@@ -1,6 +1,9 @@
 @mixin inter {
   font-family: "Inter", sans-serif;
 }
+@mixin roboto {
+  font-family: "Roboto", sans-serif;
+}
 @mixin mainColor {
   color: #ffffff;
 }
@@ -14,7 +17,7 @@
   color: #c4364e;
 }
 @mixin greenColor {
-  color: #c4364e;
+  color: #4FFFAA;
 }
 @mixin darkWhiteColor {
   color: #ced7e2;

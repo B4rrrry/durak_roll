@@ -244,6 +244,12 @@ a:hover {
   background: rgba(35, 35, 35, 0.71);
   backdrop-filter: blur(40px);
 }
+.header__burger {
+  display: none;
+}
+.header__burger-btn {
+  display: none;
+}
 .header__wrap {
   display: flex;
   align-items: center;
@@ -367,6 +373,41 @@ a:hover {
   border-radius: 54px;
 }
 
+@media screen and (max-width: 320px) {
+  .header__menu {
+    display: none;
+  }
+  .header__logo {
+    display: none;
+  }
+  .header__user {
+    display: none;
+  }
+  .header__burger-btn {
+    display: block;
+  }
+}
+.footer__menu {
+  display: flex;
+  color: #5f5f5f;
+  margin-left: 413px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.footer__menu-link {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: normal;
+  line-height: 156%;
+  color: #5f5f5f;
+}
+
+@media screen and (max-width: 320px) {
+  .footer__menu {
+    margin: 0;
+  }
+}
 .online-chat {
   width: 400px;
   height: 738px;
@@ -583,7 +624,7 @@ a:hover {
   background-color: #252628;
   border: 1px solid rgba(255, 255, 255, 0.03);
   box-sizing: border-box;
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 5px;
   padding: 0px 10px 0px 0px;
 }
 .roulette__bet-sum {
@@ -639,6 +680,103 @@ a:hover {
   font-weight: normal;
   line-height: 96%;
 }
+.roulette__history {
+  display: flex;
+}
+.roulette__history--m {
+  margin-top: 20px;
+  margin-left: 12px;
+}
+.roulette__history-item {
+  width: 354px;
+  margin-right: 19px;
+}
+.roulette__history-item:last-child {
+  margin-right: 0;
+}
+.roulette__history-header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background: #212121;
+  border-radius: 5px;
+  padding: 0 18px 0 12px;
+  margin-bottom: 14px;
+}
+.roulette__history-header-img {
+  width: 23px;
+  height: 21px;
+  margin-right: 9px;
+}
+.roulette__history-header-title {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: normal;
+  color: #ced7e2;
+  margin-right: auto;
+}
+.roulette__history-header-type {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+}
+.roulette__history-header-type--win {
+  color: #4FFFAA;
+}
+.roulette__history-header-type--lose {
+  color: #c4364e;
+}
+.roulette__history-list {
+  background: #212121;
+  border-radius: 5px;
+}
+.roulette__history-list-item {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px 13px 15px;
+  border-bottom: 3px solid #272727;
+}
+.roulette__history-list-item:last-child {
+  border: 0;
+}
+.roulette__history-list-user {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.roulette__history-list-img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+.roulette__history-list-name {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-right: 4px;
+}
+.roulette__history-list-icon {
+  width: 22px;
+  height: 22px;
+}
+.roulette__history-list-sum {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+.roulette__history-list-sum--win {
+  color: #4FFFAA;
+}
+.roulette__history-list-sum--lose {
+  color: #c4364e;
+}
 
 .games {
   padding: 22px 0 0 0;
@@ -648,4 +786,10 @@ a:hover {
 }
 .games__wrap {
   display: flex;
+}
+
+@media screen and (max-width: 320px) {
+  .games {
+    display: none;
+  }
 }
