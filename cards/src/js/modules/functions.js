@@ -14,3 +14,14 @@ export function isWebp() {
 		document.documentElement.classList.add(className);
 	});
 }
+//Бургер
+export function burgerInit() {
+	const burgerBtn = document.querySelector('.header__burger-btn'),
+				burger = document.querySelector('.header__burger');
+
+	burgerBtn.addEventListener('click', ()=> {
+		burgerBtn.classList.toggle('header__burger-btn--active')
+		burger.classList.toggle('header__burger--active');
+		document.body.classList.toggle('hidden');
+	})
+}

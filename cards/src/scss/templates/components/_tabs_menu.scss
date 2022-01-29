@@ -1,0 +1,24 @@
+.tabs {
+  // menu
+  &__menu {
+    display: flex;
+    margin-bottom: 14px;
+    @include mainText;
+    font-weight: 500;
+    @include secondColor;
+    // item
+    &-item {
+      margin-right: 16px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    // link
+    &-link {
+      &--active {
+        @include redColor;
+        font-weight: bold;
+      }
+    }
+  }
+}

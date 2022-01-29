@@ -2,10 +2,14 @@
   padding: 21px 0;
   background: rgba(35, 35, 35, 0.71);
   backdrop-filter: blur(40px);
-  // burger 
+  // burger
   &__burger {
     display: none;
-    // btn 
+    // head
+    &-head {
+      display: none;
+    }
+    // btn
     &-btn {
       display: none;
     }
@@ -94,6 +98,7 @@
       // text
       &-text {
         @include mainText;
+        @include greenColor;
       }
     }
     // user menu
@@ -153,25 +158,194 @@
     }
   }
 }
-@media screen and (max-width:320px) {
+@media screen and (max-width: 320px) {
   .header {
-    // menu 
+    width: 100%;
+    position: fixed;
+    padding: 10px 0 11px 0;
+    background: #1e1e1e;
+    z-index: 111;
+    // desktop
+    // menu
     &__menu {
       display: none;
     }
+    // logo
     &__logo {
       display: none;
     }
+    // user
     &__user {
       display: none;
-    }
-    &__burger {
-      
-      // btn 
-      &-btn {
-        display: block;
+      // level
+      &-level {
+        align-items: center;
+        // progress
+        &-progress {
+          width: 195px;
+        }
+        // line
+        &-line {
+          width: 113px;
+        }
       }
-
+    }
+    // desktop end
+    &__burger {
+      width: 100%;
+      height: 100vh;
+      background: #1e1e1e;
+      position: fixed;
+      top: 46px;
+      left: -100%;
+      transition: all 0.4s ease;
+      display: block;
+      padding: 0 20px;
+      z-index: 1000;
+      &--active {
+        left: 0;
+      }
+      // head
+      &-head {
+        display: flex;
+        align-items: center;
+      }
+      // btn
+      &-btn {
+        display: flex;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        margin-right: 19px;
+        span {
+          width: 20px;
+          height: 3px;
+          background-color: #505050;
+          position: relative;
+          transition: all 0.3s ease;
+          &::before,
+          &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: #505050;
+            transition: all 0.3s ease;
+          }
+          &::before {
+            top: 6px;
+          }
+          &::after {
+            bottom: 6px;
+          }
+        }
+        &--active {
+          span {
+            transform: rotate(45deg);
+            &::after {
+              bottom: 0;
+            }
+            &::after,
+            &::before {
+              transform: rotate(90deg);
+              top: 0;
+            }
+          }
+        }
+      }
+      // logo
+      &-logo {
+        width: 108px;
+        height: 26px;
+      }
+      // user
+      &-user {
+        margin-bottom: 17px;
+        // wrap
+        &-wrap {
+          display: flex;
+          margin-bottom: 11px;
+        }
+        // img
+        &-img {
+          width: 69px;
+          height: 69px;
+          margin-right: 11px;
+        }
+        // info
+        &-info {
+        }
+        // name
+        &-name {
+          font-weight: 600;
+          font-size: 19px;
+          margin-bottom: 3px;
+        }
+        // menu
+        &-menu {
+          margin: 0 auto 17px;
+          @include mainColor;
+          // item
+          &__item {
+            width: 100%;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #575757;
+            border-radius: 5px;
+            margin-bottom: 7px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+          // link
+          &__link {
+            @include mainColor;
+            @include mainText;
+            font-weight: 500;
+          }
+        }
+      }
+      // balance
+      &-balance {
+        display: flex;
+        // icon
+        &-icon {
+          width: 20px;
+          height: 23px;
+          margin-right: 2px;
+        }
+        // count
+        &-count {
+          font-weight: 500;
+          font-size: 19px;
+          line-height: 23px;
+          @include greenColor;
+        }
+      }
+      // menu
+      &-menu {
+        @include secondColor;
+        @include mainText;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 96%;
+        // item
+        &-item {
+          margin-bottom: 21px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        // link
+        &-link {
+          @include secondColor;
+          &--red {
+            @include redColor;
+          }
+        }
+      }
     }
   }
 }
