@@ -27,6 +27,9 @@ a:hover {
 .hidden {
   overflow: hidden;
 }
+.wrap {
+  display: flex;
+}
 //Specifications end
 @import './templates/header';
 @import './templates/footer';
@@ -34,3 +37,4 @@ a:hover {
 @import './templates/components/online_chat';
 @import './templates//components/roulette';
 @import './templates/games';
+@import './templates/profile';

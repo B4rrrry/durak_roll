@@ -6,7 +6,7 @@
   position: relative;
   // header
   &__header {
-    padding: 16px 0 16px 12px;
+    padding: 16px 23px 16px 12px;
     background: #2f2f2f;
     border-radius: 5px;
     position: relative;
@@ -23,6 +23,27 @@
     &-title {
       @include mainColor;
       font-weight: 500;
+      margin-right: auto;
+    }
+    // online
+    &-online {
+      display: flex;
+      align-items: center;
+      // count
+      &-count {
+        @include mainText;
+        font-weight: 500;
+        @include darkWhiteColor;
+        margin-right: 6px;
+      }
+      // icon
+      &-icon {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #79ffa7;
+        box-shadow: 0px 0px 16px #79ffa7;
+      }
     }
   }
   // main
@@ -30,6 +51,11 @@
     // wrap
     &-wrap {
       position: relative;
+      overflow-y: scroll;
+      height: 600px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
       // shadow
       &::before {
         content: "";
@@ -39,11 +65,7 @@
         z-index: 1;
         top: -10px;
         left: 0;
-        background: linear-gradient(
-          180deg,
-          #212121 20.24%,
-          rgba(28, 31, 36, 0) 113.1%
-        );
+        background: linear-gradient(180deg, #212121 20.24%, rgba(28, 31, 36, 0) 113.1%);
       }
     }
     // messages
@@ -138,7 +160,7 @@
     }
   }
 }
-@media screen and (max-width:320px) {
+@media screen and (max-width: 320px) {
   .online-chat {
     display: none;
   }
