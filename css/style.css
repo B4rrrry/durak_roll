@@ -243,6 +243,10 @@ a:hover {
   position: static;
 }
 
+.hidden {
+  overflow: hidden;
+}
+
 .header {
   padding: 21px 0;
   background: rgba(35, 35, 35, 0.71);
@@ -412,11 +416,12 @@ a:hover {
     height: 100vh;
     background: #1e1e1e;
     position: fixed;
-    top: 50px;
+    top: 46px;
     left: -100%;
     transition: all 0.4s ease;
     display: block;
     padding: 0 20px;
+    z-index: 1000;
   }
   .header__burger--active {
     left: 0;
@@ -751,7 +756,7 @@ a:hover {
   left: 0;
   right: 0;
   margin: 0 auto;
-  z-index: 1000;
+  z-index: 100;
 }
 .roulette__last-rolls {
   display: flex;
